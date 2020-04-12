@@ -52,7 +52,9 @@ surface_reset_target()
 
 
 draw_surface(rift,x-width/2,y-height/2)
-
+if collision_line(x,y,end_x,end_y,obj_player,true,true){
+	draw_sprite_ext(obj_player.sprite_index,obj_player.image_index,obj_player.x,obj_player.y,obj_player.image_xscale,obj_player.image_yscale,obj_player.image_angle,c_white,obj_player.image_alpha)
+}
 draw_set_color(c_red)
 draw_line_width(x,y,end_x,end_y,2)
 draw_set_color(c_black)

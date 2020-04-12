@@ -631,14 +631,6 @@
             }
         },
         {
-            "Key": "dea82e11-198b-4b68-98ff-3ef0c0fc3b12",
-            "Value": {
-                "id": "955655cb-9bb8-482c-b00e-ae4766ad5144",
-                "resourcePath": "objects\\obj_dimension_control\\obj_dimension_control.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "df46a1f9-0441-455d-bee1-e9c4be79f856",
             "Value": {
                 "id": "1cb647c2-f342-4521-8c06-2c37dc710c90",

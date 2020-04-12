@@ -11,7 +11,6 @@ for (var i = 0; i < array_length_1d(layer_elements); i++){
 		draw_sprite_ext(inst.sprite_index,inst.image_index,inst.x-x+width/2,inst.y-y+height/2,inst.image_xscale,inst.image_yscale,inst.image_angle,c_white,inst.image_alpha)
 	}
 }
-//draw_sprite_ext(obj_player.sprite_index,obj_player.image_index,obj_player.x-x+width/2,obj_player.y-y+height/2,obj_player.image_xscale,obj_player.image_yscale,obj_player.image_angle,c_white,obj_player.image_alpha)
 
 surface_reset_target()
 
