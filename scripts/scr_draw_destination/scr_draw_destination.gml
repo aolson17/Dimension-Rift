@@ -1,9 +1,9 @@
 
 
-surface_set_target(dimension)
+surface_set_target(argument0)
 draw_clear_alpha(c_black,0)
 
-var layer_elements = layer_get_all_elements(target_layer)
+var layer_elements = layer_get_all_elements(obj_player.layer)
 for (var i = 0; i < array_length_1d(layer_elements); i++){
 	if (layer_get_element_type(layer_elements[i]) == layerelementtype_instance){
 		var ele = layer_elements[i]

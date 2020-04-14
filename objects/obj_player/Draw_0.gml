@@ -15,7 +15,7 @@ if state = magic{
 			book_image_index = 0
 		}
 	}else{
-		if image_index < 5{ // Only turn pages when looking at the book
+		if image_index < 4{ // Only turn pages when looking at the book
 			if irandom(30) = 0{
 				book_image_index = .1
 			}

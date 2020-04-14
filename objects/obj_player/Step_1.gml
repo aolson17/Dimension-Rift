@@ -10,7 +10,11 @@ if !global.in_dialogue{
 	mouse_r_released = mouse_check_button_released(mb_right)
 	mouse_r_pressed = mouse_check_button_pressed(mb_right)
 	mouse_r = mouse_check_button(mb_right)
-	mousel_pressed = mouse_check_button_pressed(mb_left)
+	mouse_m_released = mouse_check_button_released(mb_middle)
+	mouse_m_pressed = mouse_check_button_pressed(mb_middle)
+	mouse_m = mouse_check_button(mb_middle)
+	mouse_l_pressed = mouse_check_button_pressed(mb_left)
 	mouse_l = mouse_check_button(mb_left)
+	mouse_l_released = mouse_check_button_released(mb_left)
 	sprint_key = keyboard_check(vk_shift)
 }

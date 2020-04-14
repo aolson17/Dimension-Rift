@@ -31,6 +31,9 @@ book_image_index = 0
 invincibility_frames = 40
 invincible = false
 
+casting = false
+casting_sight = false
+
 attack_cooldown_frames = 20
 attack_cooldown = 0
 
@@ -52,3 +55,5 @@ face = 1 // 1 for right, -1 for left
 prev_face = face
 prev_ysp = ysp
 prev_state = state
+
+col_list = ds_list_create()

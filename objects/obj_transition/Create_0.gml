@@ -13,5 +13,5 @@ fade_out = true
 alarm[0] = fade_ticks
 
 
-room_target = Menu // Default location, change when creating object
+room_target = rm_test // Default location, change when creating object
 

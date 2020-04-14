@@ -7,7 +7,7 @@ if prev_state != state{
 }
 prev_state = state
 
-if !mouse_r{
+if !casting{
 	state = magic_end
 }
 

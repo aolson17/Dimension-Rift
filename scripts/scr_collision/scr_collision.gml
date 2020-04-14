@@ -63,7 +63,7 @@ if col != noone{
 	}
 	if place_meeting(x,y,col){
 		y--
-		show_debug_message("Adjusting")
+		show_debug_message("Adjusting y from collision")
 	}
 	ysp = 0
 }else{

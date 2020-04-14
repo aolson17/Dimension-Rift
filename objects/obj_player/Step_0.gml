@@ -4,7 +4,7 @@
 move = right_key-left_key
 
 
-var col_list = ds_list_create()
+ds_list_clear(col_list)
 instance_place_list((x),(y+1),par_solid,col_list,true)
 on_ground = false
 for(var i = 0; i < ds_list_size(col_list); i++){
@@ -13,8 +13,6 @@ for(var i = 0; i < ds_list_size(col_list); i++){
 		break
 	}
 }
-
-ds_list_destroy(col_list)
 
 if on_ground{
 	if !global.in_dialogue && state = stand || state = run || state = land && hp > 0{
@@ -78,7 +76,7 @@ if !on_ground{ // Apply gravity
 #region Jump
 if on_ground || coyote_jump{
 	jumping = false
-	if state != knocked && state != hurt && state != get_up{
+	if state != magic{//state != knocked && state != hurt && state != get_up{
 		if jump_key || queue_jump{ // Jump
 			ysp = -jump_speed
 			jumping = true
@@ -119,12 +117,27 @@ if jump_key_released{ // Cancel queued jump
 
 
 
-if state = stand || state = land || state = run{
+if state = stand || state = land || state = run && state != magic{
 	if mouse_r_pressed{
 		face = sign(mouse_x-x)
 		if face = 0{face = 1}
 		instance_create_layer(mouse_x,mouse_y,"Rift",obj_rift)
 		state = magic
+		casting = true
+	}
+	if mouse_m_pressed && instance_number(obj_portal) = 0{
+		face = sign(mouse_x-x)
+		if face = 0{face = 1}
+		instance_create_layer(mouse_x,mouse_y,"Rift",obj_portal)
+		state = magic
+		casting = true
+	}
+	if mouse_l{
+		face = sign(mouse_x-x)
+		if face = 0{face = 1}
+		state = magic
+		casting = true
+		casting_sight = true
 	}
 }
 

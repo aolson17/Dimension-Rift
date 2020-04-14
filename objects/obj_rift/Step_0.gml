@@ -12,6 +12,7 @@ if !formed{
 	}
 	if obj_player.mouse_r_released{
 		formed = true
+		obj_player.casting = false
 	}
 }
 
@@ -24,26 +25,66 @@ far_end_2_x = end_x+lengthdir_x(rift_depth,dir)
 far_end_2_y = end_y+lengthdir_y(rift_depth,dir)
 
 if formed{
-	
 	side = sign((obj_player.x-x)*(end_y-y)-(obj_player.y-y)*(end_x-x))
-	show_debug_message(side)
 	
 	if side != prev_side && side != 0 && prev_side != 0{
 		if collision_line(x,y,end_x,end_y,obj_player,true,true){
-			obj_player.layer = layer_get_id(target_layer)
+			global.prev_player_layer = obj_player.layer
+			layer_set_visible(obj_player.layer,false)
+			obj_player.layer = target_layer
 			layer_set_visible(target_layer,true)
-			if obj_player.layer = layer_get_id("Zones_1"){
-				target_layer = "Zones_2"
-				layer_background_blend(layer_background_get_id("Background"),background_1)
-			}else{
-				target_layer = "Zones_1"
-				layer_background_blend(layer_background_get_id("Background"),background_2)
+			for(var i = 0; i <= obj_dimensions.total_dimensions; i++){
+				if target_layer = obj_dimensions.layers[i]{
+					target_dimension = i
+				}
 			}
-			layer_set_visible(target_layer,false)
+			
+			obj_dimensions.current_dimension = target_dimension
+			layer_background_blend(layer_background_get_id("Background"),obj_dimensions.backgrounds[obj_dimensions.current_dimension])
 			reset_dimension = true
 		}
 	}
 	if side != 0{
 		prev_side = side
+	}
+}
+
+if target_layer = obj_player.layer{
+	target_layer = global.prev_player_layer
+	for(var i = 0; i <= obj_dimensions.total_dimensions; i++){
+		if target_layer = obj_dimensions.layers[i]{
+			target_dimension = i
+		}
+	}
+	reset_dimension = true
+}
+
+if life_frames <= 0{
+	if shrink_timer <= 0{
+		shrink_timer = shrink_time
+		
+		var dir = point_direction(x,y,end_x,end_y)
+		var x_change = lengthdir_x(shrink_amount,dir)
+		var y_change = lengthdir_y(shrink_amount,dir)
+		x += x_change
+		y += y_change
+		end_x -= x_change
+		end_y -= y_change
+		shrink_amount += shrink_amount_increase
+		
+		if point_distance(x,y,end_x,end_y) < 3{
+			instance_destroy()
+		}
+		reset_dimension = true
+	}else{
+		if point_distance((x+end_x)/2,(y+end_y)/2,obj_player.x,obj_player.y) > life_range{
+			shrink_timer--
+		}else{
+			shrink_amount = shrink_amount_start
+		}
+	}
+}else{
+	if distance_to_object(obj_player) > life_range{
+		life_frames--
 	}
 }

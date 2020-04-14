@@ -1,5 +1,8 @@
 /// @description Initialize Variables and List
 
+// REMOVE THIS
+dialogue_stage = 0
+
 #region Values to customize
 
 range = 40 // How many pixels away to still start dialogue

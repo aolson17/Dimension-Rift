@@ -4,7 +4,6 @@ image_speed = (run_image_speed_factor*xsp)*face
 
 if prev_state != state{
 	image_index = 0
-	played_sound = false
 }
 prev_state = state
 

@@ -19,7 +19,11 @@ if !on_ground{ // If in air
 		if prev_ysp >= 3.5{
 			state = land
 		}else{
-			state = stand
+			if xsp = 0{
+				state = stand
+			}else{
+				state = run
+			}
 		}
 	}else{
 		state = run
