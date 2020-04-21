@@ -1,6 +1,8 @@
 
 stand_mask = spr_player_mask
 
+dimensions_unlocked = 1
+
 max_hp = 3
 hp = max_hp
 
