@@ -20,4 +20,6 @@ if !global.in_dialogue{
 }else{
 	left_key = 0
 	right_key = 0
+	jump_key = false
+	jump_key_released = false
 }
