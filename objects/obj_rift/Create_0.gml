@@ -1,6 +1,6 @@
 
 
-max_size = 90
+max_size = 150
 
 target_dimension = obj_dimensions.target_dimension
 target_layer = obj_dimensions.layers[target_dimension]
