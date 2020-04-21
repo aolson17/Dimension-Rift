@@ -116,31 +116,31 @@ if jump_key_released{ // Cancel queued jump
 #endregion
 
 
-
-if state = stand || state = land || state = run && state != magic{
-	if mouse_r_pressed{
-		face = sign(mouse_x-x)
-		if face = 0{face = 1}
-		instance_create_layer(mouse_x,mouse_y,"Rift",obj_rift)
-		state = magic
-		casting = true
-	}
-	if mouse_m_pressed && instance_number(obj_portal) = 0{
-		face = sign(mouse_x-x)
-		if face = 0{face = 1}
-		instance_create_layer(mouse_x,mouse_y,"Rift",obj_portal)
-		state = magic
-		casting = true
-	}
-	if mouse_l{
-		face = sign(mouse_x-x)
-		if face = 0{face = 1}
-		state = magic
-		casting = true
-		casting_sight = true
+if dimensions_unlocked > 1{
+	if state = stand || state = land || state = run && state != magic{
+		if mouse_r_pressed{
+			face = sign(mouse_x-x)
+			if face = 0{face = 1}
+			instance_create_layer(mouse_x,mouse_y,"Rift",obj_rift)
+			state = magic
+			casting = true
+		}
+		/*if mouse_m_pressed && instance_number(obj_portal) = 0{
+			face = sign(mouse_x-x)
+			if face = 0{face = 1}
+			instance_create_layer(mouse_x,mouse_y,"Rift",obj_portal)
+			state = magic
+			casting = true
+		}*/
+		if mouse_l{
+			face = sign(mouse_x-x)
+			if face = 0{face = 1}
+			state = magic
+			casting = true
+			casting_sight = true
+		}
 	}
 }
-
 
 
 
