@@ -9,9 +9,9 @@ if !global.in_dialogue && global.dialogue_ready{
 	if point_distance(x,y,obj_player.x,obj_player.y) < obj_dialogue.range{
 		if dialogue_stage = 0{ // If this is the first time talking
 			// Each time scr_dialogue or one of the other dialogue types are ran dialogue stage increases by one
-			scr_dialogue(spr_portrait,global.font,"Hello! This is some example text, long enough to show making a new line. Blah bed apsuhd juiosdf moasd wa blah. I have spoken.")
-			scr_dialogue(spr_portrait,global.font,"This is another page of text!")
-			scr_dialogue(spr_portrait_speaker,global.font,"Hello! This is a speaker talking to you directly Kyle")
+			scr_dialogue(spr_portrait_speaker,global.font,"You have made it to the end! Just a few more steps before you are no longer a student here.")
+			scr_dialogue(spr_portrait,global.font,"That was pretty tough, though.")
+			scr_dialogue(spr_portrait_speaker,global.font,"But this means you are ready for graduation. Congratulations!")
 		}
 	}
 }
