@@ -142,13 +142,13 @@
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Instances_1",
-            "id": "c49c22b2-36e3-417d-97df-40ac0f5c91b9",
+            "name": "Dimension_3",
+            "id": "c119215a-0206-4f29-9ac6-575b73bff232",
             "depth": 400,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
-            "hierarchyVisible": true,
+            "hierarchyVisible": false,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
             "inheritSubLayers": false,
@@ -164,7 +164,7 @@
             "modelName": "GMRInstanceLayer",
             "mvc": "1.0",
             "userdefined_depth": false,
-            "visible": true
+            "visible": false
         },
         {
             "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
