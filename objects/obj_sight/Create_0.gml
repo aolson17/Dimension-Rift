@@ -1,7 +1,7 @@
 
 
 
-size = 60
+size = 65
 
 
 target_dimension = obj_dimensions.target_dimension
