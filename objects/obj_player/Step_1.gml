@@ -17,4 +17,7 @@ if !global.in_dialogue{
 	mouse_l = mouse_check_button(mb_left)
 	mouse_l_released = mouse_check_button_released(mb_left)
 	sprint_key = keyboard_check(vk_shift)
+}else{
+	left_key = 0
+	right_key = 0
 }

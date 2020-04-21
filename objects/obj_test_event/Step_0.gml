@@ -15,7 +15,7 @@ if !global.in_dialogue && global.dialogue_ready{
 	}
 }
 
-var last_dialogue_stage = 2 // Set this to whatever you want the last dialgue to be before the animation pauses
+var last_dialogue_stage = 1 // Set this to whatever you want the last dialgue to be before the animation pauses
 if global.in_dialogue || dialogue_stage > last_dialogue_stage{ // This will pause the moving excalmation mark animation after all of the dialogue is scene
 	image_speed = 0
 }else{

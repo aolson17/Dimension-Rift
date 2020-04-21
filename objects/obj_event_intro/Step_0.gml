@@ -11,6 +11,7 @@ if !global.in_dialogue && global.dialogue_ready{
 			// Each time scr_dialogue or one of the other dialogue types are ran dialogue stage increases by one
 			scr_dialogue(spr_portrait,global.font,"Hello! This is some example text, long enough to show making a new line. Blah bed apsuhd juiosdf moasd wa blah. I have spoken.")
 			scr_dialogue(spr_portrait,global.font,"This is another page of text!")
+			scr_dialogue(spr_portrait_speaker,global.font,"Hello! This is a speaker talking to you directly Kyle")
 		}
 	}
 }
