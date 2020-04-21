@@ -13,7 +13,7 @@ if !global.in_dialogue && global.dialogue_ready{
 			scr_dialogue(spr_portrait,global.font,"Wow I am finally here!")
 			scr_dialogue(spr_portrait_speaker,global.font,"Yes, yes. Now you see that green orb?")
 			scr_dialogue(spr_portrait,global.font,"Yeah right behind me.")
-			scr_dialogue(spr_portrait_speaker,global.font,"You pass the test by reaching it. You must find your way through the testing area through the testing area.")
+			scr_dialogue(spr_portrait_speaker,global.font,"You pass the test by reaching it. You must find your way through the testing area. It represents a labyrinth of freedom.")
 			scr_dialogue(spr_portrait_speaker,global.font,"Move around with the A and D keys and jump with space.")
 			scr_dialogue(spr_portrait_speaker,global.font,"Good luck, future wizard!")
 		}
@@ -23,7 +23,10 @@ if !global.in_dialogue && global.dialogue_ready{
 var last_dialogue_stage = 2 // Set this to whatever you want the last dialgue to be before the animation pauses
 if global.in_dialogue || dialogue_stage > last_dialogue_stage{ // This will pause the moving excalmation mark animation after all of the dialogue is scene
 	image_speed = 0
-	visible = false
 }else{
 	image_speed = 1
+}
+
+if dialogue_stage > last_dialogue_stage{
+	visible = false
 }
