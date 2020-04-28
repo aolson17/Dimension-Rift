@@ -7,9 +7,27 @@
 
 if mouse_wheel_up(){
 	target_dimension++
+	if target_dimension = current_dimension{
+		target_dimension++
+	}
+	if target_dimension > total_dimensions{
+		target_dimension = 1
+	}
+	if target_dimension = current_dimension{
+		target_dimension++
+	}
 }
 if mouse_wheel_down(){
 	target_dimension--
+	if target_dimension = current_dimension{
+		target_dimension--
+	}
+	if target_dimension < 1{
+		target_dimension = total_dimensions
+	}
+	if target_dimension = current_dimension{
+		target_dimension--
+	}
 }
 
 if keyboard_check_pressed(ord("1")){

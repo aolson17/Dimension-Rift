@@ -9,7 +9,12 @@ for (var i = 0; i < array_length_1d(layer_elements); i++){
 		var ele = layer_elements[i]
 		var inst = layer_instance_get_instance(ele)
 		if inst.visible{
-			draw_sprite_ext(inst.sprite_index,inst.image_index,inst.x-round(x)+width/2,inst.y-round(y)+height/2,inst.image_xscale,inst.image_yscale,inst.image_angle,c_white,inst.image_alpha)
+			if inst.object_index = par_solid{
+				var col = inst.col
+			}else{
+				var col = c_white
+			}
+			draw_sprite_ext(inst.sprite_index,inst.image_index,inst.x-round(x)+width/2,inst.y-round(y)+height/2,inst.image_xscale,inst.image_yscale,inst.image_angle,col,inst.image_alpha)
 		}
 	}
 }
