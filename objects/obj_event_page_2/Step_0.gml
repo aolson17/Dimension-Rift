@@ -9,12 +9,12 @@ if !global.in_dialogue && global.dialogue_ready{
 	if point_distance(x,y,obj_player.x,obj_player.y) < obj_dialogue.range{
 		if dialogue_stage = 0{ // If this is the first time talking
 			// Each time scr_dialogue or one of the other dialogue types are ran dialogue stage increases by one
-			scr_dialogue(spr_portrait,global.font,"Woah that looks like an important sheet of paper there.")
-			scr_dialogue(spr_portrait_speaker,global.font,"That would be an understatement. On that paper is the recipe for the key to the other dimension used in this exam.")
-			scr_dialogue(spr_portrait_speaker,global.font,"That means that after picking it up you will be able to use your dimensional magic!")
-			scr_dialogue(spr_portrait_speaker,global.font,"Use the left mouse button to take a glimpse into the other dimension and the right mouse button to create a rift between them.")
-			scr_dialogue(spr_portrait_speaker,global.font,"You can also hit the Q button to remove all portals.")
-			scr_dialogue(spr_portrait_speaker,global.font,"This rift spell will be your key to advancing and ultimately passing this exam.")
+			scr_dialogue(spr_portrait,global.font,"Another page!")
+			scr_dialogue(spr_portrait_speaker,global.font,"And with it, your knowledge expands.")
+			scr_dialogue(spr_portrait_speaker,global.font,"Once you pick it up, you will have the ability to change your target dimension.")
+			scr_dialogue(spr_portrait_speaker,global.font,"This is done with either the scroll wheel or the 1 2 and 3 keys.")
+			scr_dialogue(spr_portrait,global.font,"Perfect, I'll be a full wizard in no time.")
+			scr_dialogue(spr_portrait_speaker,global.font,"Now don't underestimate this exam.")
 		}
 	}
 }
