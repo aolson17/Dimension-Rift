@@ -13,7 +13,7 @@ if mouse_wheel_down(){
 }
 
 if keyboard_check_pressed(ord("1")){
-	if obj_player.dimensions_unlocked > 1 && current_dimension != 2{
+	if obj_player.dimensions_unlocked > 1 && current_dimension != 1{
 		target_dimension = 1
 	}
 }

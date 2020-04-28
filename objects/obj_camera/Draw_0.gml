@@ -14,10 +14,11 @@ if obj_player.dimensions_unlocked >= 2{
 	draw_text(gui_x+10,gui_y+10,"Dimension 1")
 	draw_text(gui_x+10,gui_y+30,"Dimension 2")
 }
+
+var target_text_x = gui_x+85
 if obj_player.dimensions_unlocked = 3{
 	draw_text(gui_x+10,gui_y+50,"Dimension 3")
 	
-	var target_text_x = gui_x+85
 	switch(obj_dimensions.target_dimension){
 		case 1:	draw_text(target_text_x,gui_y+10,"- Target")
 			break
