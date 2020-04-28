@@ -7,7 +7,7 @@ if instance_number(object_index)>1{
 
 	global.master_volume = 1
 
-	global.music_volume = .8
+	global.music_volume = .5
 	global.sound_volume = 1
 
 
