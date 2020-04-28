@@ -10,7 +10,7 @@ if mouse_wheel_up(){
 	if target_dimension = current_dimension{
 		target_dimension++
 	}
-	if target_dimension > total_dimensions{
+	if target_dimension > obj_player.dimensions_unlocked{
 		target_dimension = 1
 	}
 	if target_dimension = current_dimension{
@@ -23,7 +23,7 @@ if mouse_wheel_down(){
 		target_dimension--
 	}
 	if target_dimension < 1{
-		target_dimension = total_dimensions
+		target_dimension = obj_player.dimensions_unlocked
 	}
 	if target_dimension = current_dimension{
 		target_dimension--
