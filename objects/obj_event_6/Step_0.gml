@@ -9,9 +9,9 @@ if !global.in_dialogue && global.dialogue_ready{
 	if point_distance(x,y,obj_player.x,obj_player.y) < obj_dialogue.range{
 		if dialogue_stage = 0{ // If this is the first time talking
 			// Each time scr_dialogue or one of the other dialogue types are ran dialogue stage increases by one
-			scr_dialogue(spr_portrait_speaker,global.font,"Hello there! Welcome to the world of POKEMON!")
-			scr_dialogue(spr_portrait_speaker,global.font,"My name is OAK! People call me the POKEMON PROF! This world is inhabited by creatures called POKEMON!")
-			scr_dialogue(spr_portrait_speaker,global.font,"For some people, POKEMON are pets. Others use them for fights. Myself...I study POKEMON as a profession.")
+			scr_dialogue(spr_portrait_speaker,global.font,"This area may seem intimidating.")
+			scr_dialogue(spr_portrait_speaker,global.font,"Just remember to look before you leap!")
+			scr_dialogue(spr_portrait_speaker,global.font,"If you get lost, just keep exploring and climbing.")
 		}
 	}
 }

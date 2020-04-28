@@ -9,8 +9,8 @@ if !global.in_dialogue && global.dialogue_ready{
 	if point_distance(x,y,obj_player.x,obj_player.y) < obj_dialogue.range{
 		if dialogue_stage = 0{ // If this is the first time talking
 			// Each time scr_dialogue or one of the other dialogue types are ran dialogue stage increases by one
-			scr_dialogue(spr_portrait_speaker,global.font,"You can't see where you're going here, but trust me...")
-			scr_dialogue(spr_portrait_speaker,global.font,"Run left and jump at the last moment. Your goal is then to the left!")
+			scr_dialogue(spr_portrait_speaker,global.font,"Keep going left.")
+			scr_dialogue(spr_portrait_speaker,global.font,"Don't fall!")
 		}
 	}
 }
