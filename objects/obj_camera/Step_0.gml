@@ -44,7 +44,7 @@ if abs(y-target_y) <= leniency_y{
 	y = target_y
 }
 
-camera_set_view_pos(camera, (x-zoom_width/2), (y-zoom_height/2))
+camera_set_view_pos(camera, round(x-zoom_width/2), round(y-zoom_height/2))
 camera_set_view_angle(camera,shake_offset_r)
 camera_set_view_size(camera,zoom_width,zoom_height)
 

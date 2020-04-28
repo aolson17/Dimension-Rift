@@ -5,8 +5,8 @@
 
 draw_set_font(global.font_small)
 
-var gui_x = x-width/2
-var gui_y = y-height/2
+var gui_x = round(x)-width/2
+var gui_y = round(y)-height/2
 
 draw_set_color(c_black)
 
