@@ -59,7 +59,7 @@ if target_layer = obj_player.layer{
 	reset_dimension = true
 }
 
-if life_frames <= 0{
+if life_frames <= 0 || die{
 	if shrink_timer <= 0{
 		shrink_timer = shrink_time
 		
@@ -72,12 +72,12 @@ if life_frames <= 0{
 		end_y -= y_change
 		shrink_amount += shrink_amount_increase
 		
-		if point_distance(x,y,end_x,end_y) < 3{
+		if point_distance(x,y,end_x,end_y) < 5{
 			instance_destroy()
 		}
 		reset_dimension = true
 	}else{
-		if point_distance((x+end_x)/2,(y+end_y)/2,obj_player.x,obj_player.y) > life_range{
+		if point_distance((x+end_x)/2,(y+end_y)/2,obj_player.x,obj_player.y) > life_range || die{
 			shrink_timer--
 		}else{
 			shrink_amount = shrink_amount_start

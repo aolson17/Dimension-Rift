@@ -11,8 +11,9 @@ target_dimension = 2
 
 backgrounds[1] = make_color_rgb(229,229,229)
 backgrounds[2] = make_color_rgb(179,255,255)
+backgrounds[3] = make_color_rgb(179,255,179)
 
-total_dimensions = 2
+total_dimensions = 3
 for(var i = 1; i <= total_dimensions; i++){
 	layers[i] = layer_get_id("Dimension_"+string(i))
 }

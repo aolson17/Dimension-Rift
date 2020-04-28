@@ -45,3 +45,4 @@ far_end_1_y = mouse_y
 far_end_2_x = mouse_x
 far_end_2_y = mouse_y
 
+die = false // If this should be removed no matter what

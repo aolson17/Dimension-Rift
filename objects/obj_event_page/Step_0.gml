@@ -13,6 +13,7 @@ if !global.in_dialogue && global.dialogue_ready{
 			scr_dialogue(spr_portrait_speaker,global.font,"That would be an understatement. On that paper is the recipe for the key to the other dimension used in this exam.")
 			scr_dialogue(spr_portrait_speaker,global.font,"That means that after picking it up you will be able to use your dimensional magic!")
 			scr_dialogue(spr_portrait_speaker,global.font,"Use the left mouse button to take a glimpse into the other dimension and the right mouse button to create a rift between them.")
+			scr_dialogue(spr_portrait_speaker,global.font,"You can also hit the Q button to remove all portals.")
 			scr_dialogue(spr_portrait_speaker,global.font,"This rift spell will be your key to advancing and ultimately passing this exam.")
 		}
 	}
