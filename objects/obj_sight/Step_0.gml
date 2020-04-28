@@ -3,7 +3,10 @@
 
 
 
-
+if target_dimension != obj_dimensions.target_dimension{
+	instance_create_layer(x,y,layer,object_index)
+	instance_destroy()
+}
 
 
 

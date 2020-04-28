@@ -72,7 +72,7 @@ if life_frames <= 0 || die{
 		end_y -= y_change
 		shrink_amount += shrink_amount_increase
 		
-		if point_distance(x,y,end_x,end_y) < 5{
+		if point_distance(x,y,end_x,end_y) < 6 || shrink_amount > 12{
 			instance_destroy()
 		}
 		reset_dimension = true
