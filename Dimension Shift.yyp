@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "1be66a22-8691-49a1-a2df-cfe872da7c6f",
+            "Value": {
+                "id": "bb27fba2-bd17-41c3-b984-09d0da4845e1",
+                "resourcePath": "objects\\obj_music\\obj_music.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1c004d07-026e-4b19-a068-2eae2509f997",
             "Value": {
                 "id": "399f8900-c975-4ddd-8f1c-985993a505f5",
@@ -292,6 +300,14 @@
                 "id": "a587a973-5b28-4f56-bf88-5f65112be518",
                 "resourcePath": "sprites\\spr_player_fall\\spr_player_fall.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "59abc153-96b8-4dfd-a016-562cd5c72755",
+            "Value": {
+                "id": "9b291cf9-5e3a-45d9-a60f-d80dd6569b90",
+                "resourcePath": "sounds\\msc_clippity_clop\\msc_clippity_clop.yy",
+                "resourceType": "GMSound"
             }
         },
         {
