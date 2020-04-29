@@ -1,4 +1,5 @@
-
+/// @function scr_draw_dimension()
+/// @description Updates a dimension surface by drawing all of the things that should be shown from the target layer
 
 surface_set_target(dimension)
 draw_clear_alpha(c_black,0)

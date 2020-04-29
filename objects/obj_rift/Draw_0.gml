@@ -16,21 +16,21 @@ surface_set_target(rift)
 
 draw_clear_alpha(c_black,0)
 
-var temp_end_x = width/2+end_x-x
-var temp_end_y = height/2+end_y-y
-var temp_far_end_1_x = width/2+far_end_1_x-x
-var temp_far_end_1_y = height/2+far_end_1_y-y
-var temp_far_end_2_x = width/2+far_end_2_x-x
-var temp_far_end_2_y = height/2+far_end_2_y-y
+var adj_end_x = width/2+end_x-x
+var adj_end_y = height/2+end_y-y
+var adj_far_end_1_x = width/2+far_end_1_x-x
+var adj_far_end_1_y = height/2+far_end_1_y-y
+var adj_far_end_2_x = width/2+far_end_2_x-x
+var adj_far_end_2_y = height/2+far_end_2_y-y
 
 draw_set_color(obj_dimensions.backgrounds[target_dimension])
 
 draw_primitive_begin(pr_trianglestrip)
 draw_vertex(width/2,height/2)
-draw_vertex(temp_end_x,temp_end_y)
-draw_vertex(temp_far_end_2_x,temp_far_end_2_y)
+draw_vertex(adj_end_x,adj_end_y)
+draw_vertex(adj_far_end_2_x,adj_far_end_2_y)
 draw_vertex(width/2,height/2)
-draw_vertex(temp_far_end_1_x,temp_far_end_1_y)
+draw_vertex(adj_far_end_1_x,adj_far_end_1_y)
 draw_primitive_end()
 
 
