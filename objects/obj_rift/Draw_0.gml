@@ -1,4 +1,5 @@
 
+// Make sure surfaces exist
 if !surface_exists(rift){
 	rift = surface_create(width,height)
 }
@@ -6,16 +7,19 @@ if !surface_exists(dimension){
 	dimension = surface_create(width,height)
 	scr_draw_dimension()
 }
+// Check if the dimension surface should be updated
 if reset_dimension{
 	scr_draw_dimension()
 	reset_dimension = false
 }
 
+// Start drawing to the actual shown rift area
 surface_set_target(rift)
 
 
 draw_clear_alpha(c_black,0)
 
+// Adjust points to be relative to the x and y values within the surface
 var adj_end_x = width/2+end_x-x
 var adj_end_y = height/2+end_y-y
 var adj_far_end_1_x = width/2+far_end_1_x-x
@@ -23,6 +27,7 @@ var adj_far_end_1_y = height/2+far_end_1_y-y
 var adj_far_end_2_x = width/2+far_end_2_x-x
 var adj_far_end_2_y = height/2+far_end_2_y-y
 
+// Set up the background of the rift area
 draw_set_color(obj_dimensions.backgrounds[target_dimension])
 
 draw_primitive_begin(pr_trianglestrip)
@@ -33,9 +38,10 @@ draw_vertex(width/2,height/2)
 draw_vertex(adj_far_end_1_x,adj_far_end_1_y)
 draw_primitive_end()
 
-
+// Don't draw anything outside of the just made background
 gpu_set_blendmode_ext(bm_dest_alpha, bm_inv_src_alpha);
 
+// Draw the currently captured things in the target dimension over the background
 draw_surface(dimension,0,0)
 
 gpu_set_blendmode(bm_normal)
